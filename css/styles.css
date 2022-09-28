@@ -354,6 +354,11 @@ p {
   letter-spacing: 0.03em;
 }
 
+.project-link {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
 /* підвал */
 
 .page-footer {
