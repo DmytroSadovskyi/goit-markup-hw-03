@@ -16,6 +16,9 @@
   --accent-color: #2196f3;
   --second-accent-color: #188ce8;
   --white-semi-transparent: rgba(255, 255, 255, 0.6);
+  --header-border-color: #ececec;
+  --card-border-color: #eeeeee;
+  --card-gap: 30px;
 }
 
 body {
@@ -43,6 +46,8 @@ p {
   margin-bottom: 0;
 }
 
+/* КОНТЕЙНЕР */
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -53,13 +58,13 @@ p {
 /* стилі хедера */
 
 .page-header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--header-border-color);
 }
 
 /* логотип в хедері */
 
 .logo {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -73,6 +78,7 @@ p {
 }
 
 /* навігація */
+
 .navigation {
   display: flex;
   align-items: center;
@@ -115,6 +121,7 @@ p {
 }
 
 /* пошта і телефон */
+
 .header-contacts {
   display: flex;
   margin-left: auto;
@@ -144,17 +151,19 @@ p {
 
 .hero {
   /* фон задано тимчасово, для відображення кольору тексту */
+
   background-color: var(--first-background-color);
+
   text-align: center;
 }
 
 .hero-title {
+  padding-top: 200px;
   margin-bottom: 30px;
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-white-color);
@@ -222,6 +231,10 @@ p {
   display: flex;
 }
 
+.advantages .advantage-item + .advantage-item {
+  margin-left: 30px;
+}
+
 .advantages .title {
   margin-bottom: 10px;
   font-weight: 700;
@@ -246,6 +259,7 @@ p {
 
 .work-image {
   display: block;
+  max-width: 100%;
 }
 
 .works .work-item + .work-item {
@@ -259,7 +273,7 @@ p {
 
 .member-image {
   display: block;
-  margin-bottom: 30px;
+  max-width: 100%;
 }
 
 .team .team-member + .team-member {
@@ -268,8 +282,12 @@ p {
 
 .team-member {
   background-color: var(--primary-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+}
+
+.member-descr {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 .team .team-title {
@@ -279,17 +297,13 @@ p {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  text-align: center;
   color: var(--secondary-text-color);
 }
 
 .team .team-position {
-  margin-bottom: 30px;
-
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  text-align: center;
 }
 
 .different-background {
@@ -337,9 +351,37 @@ p {
 .project-list {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-top: calc(-1 * var(--card-gap));
+  margin-left: calc(-1 * var(--card-gap));
+}
+
+.project-item {
+  flex-basis: calc(100% / 3 - var(--card-gap));
+  margin-top: var(--card-gap);
+  margin-left: var(--card-gap);
+}
+
+.project-image {
+  display: block;
+  max-width: 100%;
+}
+
+.project-descr {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-bottom: 20px;
+
+  background: var(--primary-white-color);
+  border-left: 1px solid var(--card-border-color);
+  border-right: 1px solid var(--card-border-color);
+  border-bottom: 1px solid var(--card-border-color);
 }
 
 .project-list .project-name {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -365,11 +407,16 @@ p {
   background-color: var(--first-background-color);
 }
 
+.info {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer-logo {
   display: block;
   margin-bottom: 20px;
 
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -403,10 +450,7 @@ p {
 }
 
 .location:hover,
-.location:focus {
-  color: var(--accent-color);
-}
-
+.location:focus,
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
