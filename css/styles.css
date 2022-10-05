@@ -151,14 +151,14 @@ p {
 
 .hero {
   /* фон задано тимчасово, для відображення кольору тексту */
-
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--first-background-color);
 
   text-align: center;
 }
 
 .hero-title {
-  padding-top: 200px;
   margin-bottom: 30px;
 
   font-weight: 900;
@@ -170,9 +170,7 @@ p {
 }
 
 .hero-btn {
-  margin-bottom: 200px;
   padding: 10px 32px;
-  min-width: 216px;
 
   font-family: inherit;
   font-weight: 700;
@@ -230,6 +228,10 @@ p {
 }
 
 /* переваги */
+
+.no-bottom-padding {
+  padding-bottom: 0;
+}
 
 .advantages {
   display: flex;
@@ -325,7 +327,6 @@ p {
 }
 .filter .filter-btn {
   padding: 6px 22px;
-  min-width: 125px;
 
   font-family: inherit;
   font-weight: 500;
@@ -402,13 +403,9 @@ p {
 
 .page-footer {
   /* фон задано тимчасово, для відображення кольору тексту */
-
-  background-color: var(--first-background-color);
-}
-
-.info {
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: var(--first-background-color);
 }
 
 .footer-logo {
