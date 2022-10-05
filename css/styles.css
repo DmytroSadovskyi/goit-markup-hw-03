@@ -214,6 +214,10 @@ p {
   padding-bottom: 94px;
 }
 
+.section:nth-child(4) {
+  background-color: var(--second-background-color);
+}
+
 .section-title {
   margin-bottom: 50px;
 
@@ -304,10 +308,6 @@ p {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-}
-
-.different-background {
-  background-color: var(--second-background-color);
 }
 
 /* --ПОРТФОЛІО-- */
