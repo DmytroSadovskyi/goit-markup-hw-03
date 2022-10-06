@@ -235,10 +235,11 @@ p {
 
 .advantages {
   display: flex;
+  gap: var(--card-gap);
 }
 
-.advantages .advantage-item + .advantage-item {
-  margin-left: 30px;
+.advantage-item {
+  flex-basis: calc((100% - 90px) / 4);
 }
 
 .advantages .title {
@@ -261,6 +262,7 @@ p {
 
 .works {
   display: flex;
+  gap: var(--card-gap);
 }
 
 .work-image {
@@ -268,13 +270,14 @@ p {
   max-width: 100%;
 }
 
-.works .work-item + .work-item {
-  margin-left: 30px;
+.work-item {
+  flex-basis: calc((100% - 60px) / 3);
 }
 /* команда */
 
 .team {
   display: flex;
+  gap: var(--card-gap);
 }
 
 .member-image {
@@ -282,8 +285,8 @@ p {
   max-width: 100%;
 }
 
-.team .team-member + .team-member {
-  margin-left: 30px;
+.team-member {
+  flex-basis: calc((100% - 90px) / 4);
 }
 
 .team-member {
