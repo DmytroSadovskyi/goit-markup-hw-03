@@ -268,6 +268,7 @@ p {
 .work-image {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .work-item {
@@ -283,6 +284,7 @@ p {
 .member-image {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .team-member {
@@ -370,6 +372,7 @@ p {
 .project-image {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .project-descr {
